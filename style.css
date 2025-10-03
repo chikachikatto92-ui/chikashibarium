@@ -1,0 +1,305 @@
+@font-face {
+  font-family: 'MyComicFont';
+  src: url('fonts/ComicSansMS.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(to right, pink, lightcoral, lightblue);
+    text-align: center;
+    color: #fff;
+  }
+  
+
+  header {
+    padding: 30px 10px;
+    background-color: rgba(255, 105, 180, 0.4);
+  }
+  
+  .logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .token-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ebb866;
+  }
+  
+  .token-info h1 {
+    color: #EBB866;
+    
+  }
+  
+  
+  .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+  }
+  
+  img {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #fff;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    background-color: #fff3f3;
+  }
+  
+  img:hover {
+    border-color: #EBB866;
+    transform: scale(1.1) rotate(5deg);
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    background-color: #ff69b4;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-bottom: 40px;
+  }
+  
+  button:hover {
+    background-color: #EBB866;
+    color: black;
+    cursor: pointer;
+  }
+  
+  footer {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #EBB866;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .images {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+  
+  .chika-description {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ebb866;
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #fff;
+  }
+
+  
+  @keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .logo {
+    width: 120px;
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  
+  #copyBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 8px;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  
+  #copyBtn:hover {
+    color: #fff;
+  }
+  
+  #copyMsg {
+    color: #EBB866;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  #copyMsg.visible {
+    opacity: 1;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  #copyMsg.visible {
+    display: inline;      /* Show when visible */
+    opacity: 1;
+  }
+  
+
+  .coming-soon {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ebb866;
+    color: #fff;
+  }
+  
+  .coming-soon h2 {
+    color: #EBB866;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .coming-soon ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  
+  .coming-soon li {
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: background 0.3s;
+  }
+  
+  .coming-soon li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    cursor: default;
+  }
+  
+
+  /* Style for the .chikatk h2 heading */
+.chikatk {
+  font-size: 1.3rem; /* Larger font size */
+  font-weight: 700; /* Bold text */
+  background: linear-gradient(145deg, #ff69b4, #ff1493); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Apply gradient to text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  text-align: center; /* Center-align the text */
+  margin: 50px 0; /* Add spacing around the heading */
+  padding: 20px; /* Add padding for spacing */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 3px; /* Add spacing between letters for emphasis */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for the .chikatk heading */
+.chikatk:hover {
+  transform: scale(1.05); /* Slightly scale up the heading on hover */
+  color: #fff; /* Change the text color to white on hover */
+  text-shadow: 0 0 15px #ff1493, 0 0 20px #ff69b4; /* Glowing text effect */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back to initial position */
+  }
+}
+
+.chikatk {
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+/* Style for the .chikatk h2 heading */
+.chikatk {
+  font-size: 1.3rem; /* Larger font size */
+  font-weight: 700; /* Bold text */
+  background: linear-gradient(145deg, #ff69b4, #ff1493); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Apply gradient to text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  text-align: center; /* Center-align the text */
+  margin: 50px 0; /* Add spacing around the heading */
+  padding: 20px; /* Add padding for spacing */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 3px; /* Add spacing between letters for emphasis */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Hover effect for the .chikatk heading */
+.chikatk:hover {
+  transform: scale(1.05); /* Slightly scale up the heading on hover */
+  color: #fff; /* Change the text color to white on hover */
+  text-shadow: 0 0 15px #ff1493, 0 0 20px #ff69b4; /* Glowing text effect */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0); /* Initial position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back to initial position */
+  }
+}
+
+.chikatk {
+  animation: float 3s ease-in-out infinite; /* Floating animation */
+}
+
+/* Style for the yellow arrow */
+.yellow-arrow {
+  color: yellow; /* Set color to yellow */
+  font-size: 2rem; /* Increase font size for emphasis */
+}
+
+
+ 
+
